@@ -1,8 +1,9 @@
-import CostItem from "./CostItem";
 import "./Costs.css";
 import Card from "../UI/Card";
 import CostFilter from "./CostFilter";
 import React, { useState } from "react";
+import CostList from "./CostList";
+import CostsDiagram from "./CostsDiagram";
 
 function Costs(props) {
   // Поднять сюда данные из CostFilter
@@ -16,22 +17,16 @@ function Costs(props) {
     return cost.date.getFullYear().toString() === selectedYear;
   });
 
+  filteredCosts.sort((a, b) => a.date.getMonth() - b.date.getMonth());
+
   return (
     <div>
       <Card className="costs">
         <Card className="filter">
           <CostFilter year={selectedYear} onChangeYear={changeYearHundler} />
         </Card>
-        {filteredCosts.map((cost) => {
-          return (
-            <CostItem
-              key={cost.id}
-              date={cost.date}
-              description={cost.description}
-              amount={cost.amount}
-            />
-          );
-        })}
+        <CostsDiagram costs={filteredCosts} />
+        <CostList costs={filteredCosts} />
       </Card>
     </div>
   );
