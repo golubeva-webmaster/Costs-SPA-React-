@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.e705b554.css",
-    "main.js": "/static/js/main.44301a97.js",
-    "index.html": "/index.html",
-    "main.e705b554.css.map": "/static/css/main.e705b554.css.map",
-    "main.44301a97.js.map": "/static/js/main.44301a97.js.map"
+    "main.css": "/SPA-React/costs/static/css/main.e705b554.css",
+    "main.js": "/SPA-React/costs/static/js/main.44301a97.js",
+    "index.html": "/SPA-React/costs/index.html",
+    "main.e705b554.css.map": "/SPA-React/costs/static/css/main.e705b554.css.map",
+    "main.44301a97.js.map": "/SPA-React/costs/static/js/main.44301a97.js.map"
   },
   "entrypoints": [
     "static/css/main.e705b554.css",
